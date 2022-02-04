@@ -98,6 +98,20 @@ public abstract class AbstractSpiceSolver {
      * @version 1.0.0
      * @exception
      */
+    public Complex[][] getResult() {
+        return x;
+    }
+
+    /**
+     * regular
+     * 
+     * @author 1sand0s
+     * @param
+     * @return
+     * @since
+     * @version 1.0.0
+     * @exception
+     */
     public void numberNodes() {
         int index = 0;
         int gndIndex = -1;
@@ -114,8 +128,5 @@ public abstract class AbstractSpiceSolver {
             for (int i = 0; i < wires.get(gndIndex).getNumElements(); i++)
                 wires.get(gndIndex).getElementAtIndex(i).setTerminalIndex(index,
                         wires.get(gndIndex).getTerminalAtIndex(i));
-        
-        System.out.println(gndIndex+" "+index);
-
     }
 }

@@ -26,39 +26,7 @@ public class JHarmonic {
 //            }
 //        });
 
-        AbstractSpiceSolver solver = new DCSpiceSolver();
-        DCVoltage source = new DCVoltage();
-        Resistor r1 = new Resistor();
-        Resistor r2 = new Resistor();
-        GND g1 = new GND();
         
-        Wire w1 = new Wire();
-        Wire w2 = new Wire();
-        Wire w3 = new Wire();
-        
-        source.setValue(10);
-        r1.setValue(100);
-        r2.setValue(100);
-        
-        w1.addTerminal(source, ComponentTerminals.POS_NODE);
-        w1.addTerminal(r1, ComponentTerminals.POS_NODE);
-        
-        w2.addTerminal(r1, ComponentTerminals.NEG_NODE);
-        w2.addTerminal(r2, ComponentTerminals.POS_NODE);
-        
-        w3.addTerminal(r2, ComponentTerminals.NEG_NODE);
-        w3.addTerminal(source, ComponentTerminals.NEG_NODE);
-        w3.addTerminal(g1, ComponentTerminals.GND);
-        
-        solver.addElement(source);
-        solver.addElement(r1);
-        solver.addElement(r2);
-        solver.addElement(g1);
-        solver.addWire(w1);
-        solver.addWire(w2);
-        solver.addWire(w3);
-        
-        solver.solve();
 
     }
 }

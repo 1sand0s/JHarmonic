@@ -14,6 +14,15 @@ import static org.junit.Assert.assertTrue;
  */
 public class ComputeLinearEquation_Test {
 
+    /**
+    * regular
+    * @author 1sand0s
+    * @param 
+    * @return 
+    * @since 
+    * @version 1.0.0
+    * @exception 
+    */
     @Test
     public void solveLinearEquation_2x2Matrix() {
         double tol = 1e-5;
@@ -26,6 +35,15 @@ public class ComputeLinearEquation_Test {
         assertTrue(ComplexMatrixOperations.compareMatrices(x, xr, tol));
     }
 
+    /**
+    * regular
+    * @author 1sand0s
+    * @param 
+    * @return 
+    * @since 
+    * @version 1.0.0
+    * @exception 
+    */
     @Test
     public void solveLinearEquation_3x3Matrix() {
         double tol = 1e-5;

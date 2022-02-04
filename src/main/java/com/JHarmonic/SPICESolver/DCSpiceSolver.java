@@ -17,6 +17,9 @@ import java.util.ArrayList;
  */
 public class DCSpiceSolver extends AbstractSpiceSolver {
 
+    /**
+     * 
+     */
     public DCSpiceSolver() {
         circuitElements = new ArrayList<SElement>();
         wires = new ArrayList<Wire>();
@@ -50,7 +53,5 @@ public class DCSpiceSolver extends AbstractSpiceSolver {
         Complex A[][] = ComplexMatrixOperations.matrixConcatenator(G, B, C, D);
 
         x = ComplexMatrixOperations.computeLinearEquation(A, z);
-
-        ComplexMatrixOperations.printMatrices(x);
     }
 }

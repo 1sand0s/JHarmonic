@@ -14,6 +14,15 @@ import static org.junit.Assert.assertTrue;
  */
 public class ComputeQR_Test {
 
+    /**
+    * regular
+    * @author 1sand0s
+    * @param 
+    * @return 
+    * @since 
+    * @version 1.0.0
+    * @exception 
+    */
     @Test
     public void computeQRofIdentityMatrix() {
         double tol = 1e-5;
