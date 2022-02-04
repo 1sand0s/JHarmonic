@@ -45,7 +45,7 @@ public class Resistor extends SElement {
                             Complex[][] B,
                             Complex[][] C,
                             Complex[][] D,
-                            Complex[] b,
+                            Complex[][] z,
                             int iSourceIndex) {
         int posNode = terminals.getTerminal(ComponentTerminals.POS_NODE);
         int negNode = terminals.getTerminal(ComponentTerminals.NEG_NODE);

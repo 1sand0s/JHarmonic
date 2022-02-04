@@ -44,16 +44,7 @@ public class GND extends SElement {
                             Complex[][] B,
                             Complex[][] C,
                             Complex[][] D,
-                            Complex[] b,
+                            Complex[][] z,
                             int iSourceIndex) {
-        int gndNode = terminals.getTerminal(ComponentTerminals.GND);
-
-        for (int j = 0; j < G.length; j++) {
-            G[gndNode][j].setReal(0);
-            G[gndNode][j].setImaginary(0);
-
-            G[j][gndNode].setReal(0);
-            G[j][gndNode].setImaginary(0);
-        }
     }
 }

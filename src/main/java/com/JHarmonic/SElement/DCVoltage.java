@@ -45,17 +45,17 @@ public class DCVoltage extends SElement {
                             Complex[][] B,
                             Complex[][] C,
                             Complex[][] D,
-                            Complex[] b,
+                            Complex[][] z,
                             int iSourceIndex) {
         int posNode = terminals.getTerminal(ComponentTerminals.POS_NODE);
         int negNode = terminals.getTerminal(ComponentTerminals.NEG_NODE);
-
+        
         B[posNode][iSourceIndex].add(new Complex(1, 0));
         B[negNode][iSourceIndex].add(new Complex(-1, 0));
 
-        B[iSourceIndex][posNode].add(new Complex(1, 0));
-        B[iSourceIndex][negNode].add(new Complex(-1, 0));
+        C[iSourceIndex][posNode].add(new Complex(1, 0));
+        C[iSourceIndex][negNode].add(new Complex(-1, 0));
 
-        b[G.length + iSourceIndex].add(new Complex(voltage, 0));
+        z[G.length + iSourceIndex - 1][0].add(new Complex(voltage, 0));
     }
 }

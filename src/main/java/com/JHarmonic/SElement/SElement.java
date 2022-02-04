@@ -91,6 +91,19 @@ public abstract class SElement {
      * regular
      * 
      * @author 1sand0s
+     * @return Int[] : Terminal indices (global)
+     * @since 1.0.0
+     * @version 1.0.0
+     */
+    public void setTerminalIndex(int index,
+                                 ComponentTerminals terminal) {
+        terminals.setTerminal(index, terminal);
+    }
+
+    /**
+     * regular
+     * 
+     * @author 1sand0s
      * @param result : double array of results after solve
      * @return Double : get voltage
      * @since 1.0.0
@@ -123,6 +136,6 @@ public abstract class SElement {
                                      Complex[][] B,
                                      Complex[][] C,
                                      Complex[][] D,
-                                     Complex[] b,
+                                     Complex[][] z,
                                      int iSourceIndex);
 }

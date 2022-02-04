@@ -46,7 +46,7 @@ public class Inductor extends SElement {
                             Complex[][] B,
                             Complex[][] C,
                             Complex[][] D,
-                            Complex[] b2,
+                            Complex[][] z,
                             int iSourceIndex) {
         // TODO Auto-generated method stub
 

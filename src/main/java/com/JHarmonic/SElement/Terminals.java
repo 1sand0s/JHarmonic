@@ -42,6 +42,25 @@ public class Terminals {
      * regular
      * 
      * @author 1sand0s
+     * @param
+     * @return
+     * @since
+     * @version 1.0.0
+     * @exception
+     */
+    public void setTerminal(int index,
+                            ComponentTerminals terminal) {
+        for (int j = 0; j < nodes.size(); j++)
+            if (nodes.get(j).getName() == terminal) {
+                nodes.get(j).setIndex(index);
+                break;
+            }
+    }
+
+    /**
+     * regular
+     * 
+     * @author 1sand0s
      * @return int[] : node indices
      * @since 1.0.0
      * @version 1.0.0
@@ -55,6 +74,16 @@ public class Terminals {
         return terminal;
     }
 
+    /**
+     * regular
+     * 
+     * @author 1sand0s
+     * @param
+     * @return
+     * @since
+     * @version 1.0.0
+     * @exception
+     */
     public int getTerminal(ComponentTerminals terminal) {
         int index = -1;
 

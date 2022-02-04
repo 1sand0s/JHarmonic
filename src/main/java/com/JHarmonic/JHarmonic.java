@@ -6,6 +6,7 @@ import com.JHarmonic.Util.ComponentTerminals;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.JFrame;
+import com.JHarmonic.SPICESolver.*;
 
 /**
  *
@@ -25,6 +26,7 @@ public class JHarmonic {
 //            }
 //        });
 
+        AbstractSpiceSolver solver = new DCSpiceSolver();
         DCVoltage source = new DCVoltage();
         Resistor r1 = new Resistor();
         Resistor r2 = new Resistor();
@@ -47,6 +49,16 @@ public class JHarmonic {
         w3.addTerminal(r2, ComponentTerminals.NEG_NODE);
         w3.addTerminal(source, ComponentTerminals.NEG_NODE);
         w3.addTerminal(g1, ComponentTerminals.GND);
+        
+        solver.addElement(source);
+        solver.addElement(r1);
+        solver.addElement(r2);
+        solver.addElement(g1);
+        solver.addWire(w1);
+        solver.addWire(w2);
+        solver.addWire(w3);
+        
+        solver.solve();
 
     }
 }
